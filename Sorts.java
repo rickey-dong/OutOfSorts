@@ -5,7 +5,7 @@ public class Sorts
   {
     //[2,3,4,5,1]
     int temporary = 0;
-    System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+    //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
     for (int i = data.length; i > 0; i--)
     {
       temporary = 0;
@@ -17,7 +17,7 @@ public class Sorts
           data[j] = data[j-1]; //[6,6]
           data[j-1] = temporary; //[1,6]
           temporary = 1;
-          System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+          //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
         }
       }
       if (temporary == 0)
