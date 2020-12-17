@@ -27,4 +27,24 @@ public class Sorts
       //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
     }
   }
+  public static void selectionSort(int[] data)
+  {
+    //[6,5,1,2,3]
+    int currentSmallest = 0;
+    int tempPosition = 0;
+    for (int i = 0; i < data.length; i++)
+    {
+      currentSmallest = data[i];
+      for (int j = i + 1; j < data.length; j++)
+      {
+        if (data[j] < currentSmallest)
+        {
+          currentSmallest = data[j];
+          tempPosition = j;
+        }
+      }
+      data[tempPosition] = data[i];
+      data[i] = currentSmallest;
+    }
+  }
 }
