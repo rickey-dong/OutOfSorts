@@ -1,3 +1,4 @@
+import java.util.Random;
 public class SortsTester
 {
   public static void main(String[] args)
@@ -20,5 +21,13 @@ public class SortsTester
     System.out.println("----Reverse Sorted Values Array Sorting----");
     int[] reverseSorted = {6,5,4,3,2,-4};
     Sorts.bubbleSort(reverseSorted);
+    System.out.println("----Random Seed Array Sorting----");
+    Random rng = new Random(124);
+    int[] randomData = new int[5];
+    for (int i = 0; i < 5; i++)
+    {
+      randomData[i] = rng.nextInt() % 1000;
+    }
+    Sorts.bubbleSort(randomData);
   }
 }
