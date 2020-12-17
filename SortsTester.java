@@ -29,5 +29,13 @@ public class SortsTester
       randomData[i] = rng.nextInt() % 1000;
     }
     Sorts.bubbleSort(randomData);
+    System.out.println("----Random Array Sorting----");
+    Random rngesus = new Random();
+    int[] moreRandomData = new int[5];
+    for (int i = 0; i < 5; i++)
+    {
+      moreRandomData[i] = rngesus.nextInt() % 100;
+    }
+    Sorts.bubbleSort(moreRandomData);
   }
 }
