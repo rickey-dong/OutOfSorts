@@ -37,5 +37,8 @@ public class SortsTester
       moreRandomData[i] = rngesus.nextInt() % 100;
     }
     Sorts.bubbleSort(moreRandomData);
+    System.out.println("----Two Pass Only Array Sorting----");
+    int[] twoPass = {2,1,3,4,5};
+    Sorts.bubbleSort(twoPass);
   }
 }
