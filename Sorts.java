@@ -66,7 +66,7 @@ public class Sorts
           {
             data[j] = data[j-1];
             data[j-1] = insertThis;
-            System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+            //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
           }
         }
       }
