@@ -48,7 +48,28 @@ public class Sorts
         data[tempPosition] = data[i];
       }
       data[i] = currentSmallest;
-      System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+      //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+    }
+  }
+  public static void insertionSort(int[] data)
+  {
+    int insertThis = 0;
+    for (int i = 1; i < data.length; i++)
+    {
+      insertThis = 0;
+      if (data[i] < data[i-1])
+      {
+        insertThis = data[i];
+        for (int j = i; j > 0; j--)
+        {
+          if (data[j] < data[j-1])
+          {
+            data[j] = data[j-1];
+            data[j-1] = insertThis;
+            System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
+          }
+        }
+      }
     }
   }
 }
