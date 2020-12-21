@@ -29,12 +29,12 @@ public class Sorts
   }
   public static void selectionSort(int[] data)
   {
-    //[6,5,1,2,3]
     int currentSmallest = 0;
     int tempPosition = 0;
-    for (int i = 0; i < data.length; i++)
+    for (int i = 0; i < data.length - 1; i++)
     {
       currentSmallest = data[i];
+      tempPosition = 0;
       for (int j = i + 1; j < data.length; j++)
       {
         if (data[j] < currentSmallest)
@@ -43,8 +43,12 @@ public class Sorts
           tempPosition = j;
         }
       }
-      data[tempPosition] = data[i];
+      if (tempPosition != 0)
+      {
+        data[tempPosition] = data[i];
+      }
       data[i] = currentSmallest;
+      System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
     }
   }
 }

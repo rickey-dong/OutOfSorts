@@ -3,6 +3,7 @@ public class SortsTester
 {
   public static void main(String[] args)
   {
+    /*
     System.out.println("----One-off Array Sorting-----");
     int[] ourData = {6,1,2,3,4,5};
     Sorts.bubbleSort(ourData);
@@ -40,5 +41,13 @@ public class SortsTester
     System.out.println("----Two Pass Only Array Sorting----");
     int[] twoPass = {2,1,3,4,5};
     Sorts.bubbleSort(twoPass);
+    */
+    /*int[] ourData = {64,25,12,22,11};
+    Sorts.selectionSort(ourData);
+    int[] myData = {7,4,8,3};
+    Sorts.selectionSort(myData);
+    int[] hisData = {6,4,1};
+    Sorts.selectionSort(hisData);*/
+    
   }
 }
