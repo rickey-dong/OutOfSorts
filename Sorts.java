@@ -56,16 +56,19 @@ public class Sorts
     int insertThis = 0;
     for (int i = 1; i < data.length; i++)
     {
-      insertThis = 0;
-      if (data[i] < data[i-1])
-      {
+      if (data[i] < data[i-1]) //check to see if there is an unsorted number
+      {                        //at the current index on the right side of the array
         insertThis = data[i];
-        for (int j = i; j > 0; j--)
+        for (int j = i; j >= 0; j--)
         {
-          if (data[j] < data[j-1])
+          if (j == 0 || insertThis >= data[j - 1]) //have you reached the far left of the array or
+          {                                        //has there been found a suitable place to insert the number?
+            data[j] = insertThis;                  //then, insert it!
+            j = 0;
+          }
+          else                                     //otherwise, keep on making space for the to-be inserted number
           {
             data[j] = data[j-1];
-            data[j-1] = insertThis;
             //System.out.println(Arrays.toString(data)); //DELETE THIS AFTER YOU ARE DONE
           }
         }
