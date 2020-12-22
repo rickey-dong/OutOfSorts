@@ -16,46 +16,31 @@ public class Driver{
       if(args.length < 3 || args[2].equals("random")){
         for (int i = 0; i < randData.length; i++)
         {
-          randData[i] = rng.nextInt() % 100;
+          randData[i] = rng.nextInt() % 1000;
         }
       }else if(args[2].equals("equal")){
-        int randomEqualNum = rng.nextInt() % 100;
+        int randomEqualNum = rng.nextInt() % 1000;
         for (int i = 0; i < randData.length; i++)
         {
           randData[i] = randomEqualNum;
         }
       }else if(args[2].equals("sorted")){
-        randData[0] = rng.nextInt() % 100;
-        int nextRandom = 0;
-        for (int i = 1; i < randData.length; i++)
-        {
-          nextRandom = rng.nextInt() % 100;
-          if (nextRandom >= randData[i-1])
-          {
-            randData[i] = nextRandom;
-          }
-          else
-          {
-            i--;
-          }
-        }
-      }else if(args[2].equals("reversed")){
-        randData[0] = rng.nextInt() % 100;
+        randData[0] = rng.nextInt() % 1000;
         int nextRand = 0;
         for (int i = 1; i < randData.length; i++)
         {
-          nextRand = rng.nextInt() % 100;
-          if (nextRand <= randData[i-1])
-          {
-            randData[i] = nextRand;
-          }
-          else
-          {
-            i--;
-          }
+          nextRand = (int) (Math.random() * 20);
+          randData[i] = randData[i-1] + nextRand;
+        }
+      }else if(args[2].equals("reversed")){
+        randData[0] = rng.nextInt() % 1000;
+        int nextRand = 0;
+        for (int i = 1; i < randData.length; i++)
+        {
+          nextRand = (int) (Math.random() * 20);
+          randData[i] = randData[i-1] - nextRand;
         }
       }
-
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
       }
